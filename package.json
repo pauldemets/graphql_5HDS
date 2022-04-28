@@ -1,0 +1,32 @@
+{
+    "name": "graphql_5hds",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon --ignore data/ server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pauldemets/graphql_5HDS.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pauldemets/graphql_5HDS/issues"
+    },
+    "homepage": "https://github.com/pauldemets/graphql_5HDS#readme",
+    "dependencies": {
+        "apollo-server-express": "^1.4.0",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.3",
+        "graphql": "^0.13.2",
+        "graphql-tools": "^3.1.1",
+        "notarealdb": "^0.2.2"
+    },
+    "devDependencies": {
+        "nodemon": "1.17.1"
+    }
+}
