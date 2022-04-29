@@ -1,0 +1,9 @@
+type Product {
+   id: ID!
+   name:String
+   description:String 
+   price:String
+   stock:String
+   created_at:String
+   updated_at:String
+}

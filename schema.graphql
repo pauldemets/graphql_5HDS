@@ -3,21 +3,8 @@ type Query {
    products:[Product],
 }
 
-type User {
-   token: ID!
-   firstName:String
-   lastName:String
-   role:String
-   created_at:String
-   updated_at:String
-}
-
-type Product {
-   token: ID!
-   name:String
-   description:String 
-   price:String
-   stock:String
-   created_at:String
-   updated_at:String
+type Mutation {
+   returnStringByCreateUser(input:UserInput!):String
+   returnBooleanDeleteDataUserById(id:ID!):Boolean
+   returnStringUpdateUserById(id:ID!, input:UserInput!):String
 }

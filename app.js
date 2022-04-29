@@ -8,13 +8,18 @@ const app = express();
 
 
 const fs = require('fs')
+
 const typeDefs = fs.readFileSync('./schema.graphql', { encoding: 'utf-8' })
+const productTypeDefs = fs.readFileSync('./productSchema.graphql', { encoding: 'utf-8' })
+const userTypeDefs = fs.readFileSync('./userSchema.graphql', { encoding: 'utf-8' })
+
 const userResolvers = require('./services/UserService')
 const productResolvers = require('./services/ProductService')
 
 const { makeExecutableSchema } = require('graphql-tools')
 const schema = makeExecutableSchema({
-    typeDefs, resolvers: [userResolvers, productResolvers]
+    typeDefs: [userTypeDefs, productTypeDefs, typeDefs],
+    resolvers: [userResolvers, productResolvers]
 });
 
 app.use(cors(), bodyParser.json());
