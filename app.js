@@ -9,9 +9,9 @@ const app = express();
 
 const fs = require('fs')
 
-const typeDefs = fs.readFileSync('./schema.graphql', { encoding: 'utf-8' })
-const productTypeDefs = fs.readFileSync('./productSchema.graphql', { encoding: 'utf-8' })
-const userTypeDefs = fs.readFileSync('./userSchema.graphql', { encoding: 'utf-8' })
+const typeDefs = fs.readFileSync('./schema/schema.graphql', { encoding: 'utf-8' })
+const productTypeDefs = fs.readFileSync('./schema/productSchema.graphql', { encoding: 'utf-8' })
+const userTypeDefs = fs.readFileSync('./schema/userSchema.graphql', { encoding: 'utf-8' })
 
 const userResolvers = require('./services/UserService')
 const productResolvers = require('./services/ProductService')

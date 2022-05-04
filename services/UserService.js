@@ -10,7 +10,7 @@ const User = {
 
 
 const Mutation = {
-    returnStringByCreateUser: (root, args, context, info) => {
+    createUser: (root, args, context, info) => {
         const { firstname, lastname, role } = args.input;
 
         if (firstname.length > 15) {
@@ -31,11 +31,11 @@ const Mutation = {
 
         return `${firstname} ${lastname} successfully created.`;
     },
-    returnBooleanDeleteDataUserById: (root, args, context, info) => {
+    deleteUserById: (root, args, context, info) => {
         const result = db.users.delete(args.id);
-        return true;
+        return `User #${args.id} successfully removed.`;
     },
-    returnStringUpdateUserById: (root, args, context, info) => {
+    updateUserById: (root, args, context, info) => {
         const currentUser = db.users.get(args.id);
         const { firstname, lastname, role } = args.input;
 

@@ -4,9 +4,9 @@ type Query {
 }
 
 type Mutation {
-   returnStringByCreateUser(input:UserInput!):String
-   returnBooleanDeleteDataUserById(id:ID!):Boolean
-   returnStringUpdateUserById(id:ID!, input:UserInput!):String
+   createUser(input:UserInput!):String
+   deleteUserById(id:ID!):String
+   updateUserById(id:ID!, input:UserInput!):String
    
    
    createProduct(input:ProductInput!):String
