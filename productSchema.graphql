@@ -7,3 +7,11 @@ type Product {
    created_at:String
    updated_at:String
 }
+
+
+input ProductInput {
+   name:String
+   description:String
+   price:String
+   stock:String
+}

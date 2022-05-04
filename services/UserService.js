@@ -32,8 +32,8 @@ const Mutation = {
         return `${firstname} ${lastname} successfully created.`;
     },
     returnBooleanDeleteDataUserById: (root, args, context, info) => {
-        const result = db.users.delete(args.token);
-        return true
+        const result = db.users.delete(args.id);
+        return true;
     },
     returnStringUpdateUserById: (root, args, context, info) => {
         const currentUser = db.users.get(args.id);
@@ -51,12 +51,12 @@ const Mutation = {
 
         const result = db.users.update(
             {
-                id: args.id,
+                id: currentUser.id,
                 firstname: currentUser.firstname,
                 lastname: currentUser.lastname,
                 role: currentUser.role,
                 updated_at: new Date().toLocaleString(),
-                created_at: args.created_at,
+                created_at: currentUser.created_at,
             });
 
         return `User #${args.id} successfully updated.`;

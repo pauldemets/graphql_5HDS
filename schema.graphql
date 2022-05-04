@@ -7,4 +7,9 @@ type Mutation {
    returnStringByCreateUser(input:UserInput!):String
    returnBooleanDeleteDataUserById(id:ID!):Boolean
    returnStringUpdateUserById(id:ID!, input:UserInput!):String
+   
+   
+   createProduct(input:ProductInput!):String
+   deleteProductById(id:ID!):Boolean
+   updateProductById(id:ID!, input:ProductInput!):String
 }
